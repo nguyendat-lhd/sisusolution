@@ -6,7 +6,7 @@ type ChangeFrequency = "always" | "hourly" | "daily" | "weekly" | "monthly" | "y
 export const dynamic = "force-static"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://lhd-software.com"
+  const baseUrl = "https://sisusolution.com"
 
   // Get dynamic routes
   const services = await fetchServices()

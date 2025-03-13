@@ -72,8 +72,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Email</h3>
                     <p className="text-muted-foreground">
-                      <a href="mailto:dat.nguyen@lhd-software.com" className="hover:text-primary">
-                        dat.nguyen@lhd-software.com
+                      <a href="mailto:dat.nguyen@sisusolution.com" className="hover:text-primary">
+                        dat.nguyen@sisusolution.com
                       </a>
                     </p>
                   </div>

@@ -56,7 +56,7 @@ export interface BlogPost {
 export const fetchCompanyData = unstable_cache(
   async () => {
     try {
-      // In a real implementation, this would fetch from lhd-software.com
+      // In a real implementation, this would fetch from sisusolution.com
       // For now, we'll return mock data
       return {
         services: mockServices,
@@ -79,7 +79,7 @@ export const fetchCompanyData = unstable_cache(
 export const fetchServices = unstable_cache(
   async () => {
     try {
-      // In a real implementation, this would fetch from lhd-software.com
+      // In a real implementation, this would fetch from sisusolution.com
       return mockServices
     } catch (error) {
       console.error("Error fetching services:", error)
@@ -93,7 +93,7 @@ export const fetchServices = unstable_cache(
 export const fetchProjects = unstable_cache(
   async () => {
     try {
-      // In a real implementation, this would fetch from lhd-software.com
+      // In a real implementation, this would fetch from sisusolution.com
       return mockProjects
     } catch (error) {
       console.error("Error fetching projects:", error)
@@ -107,7 +107,7 @@ export const fetchProjects = unstable_cache(
 export const fetchTeamMembers = unstable_cache(
   async () => {
     try {
-      // In a real implementation, this would fetch from lhd-software.com
+      // In a real implementation, this would fetch from sisusolution.com
       return mockTeamMembers
     } catch (error) {
       console.error("Error fetching team members:", error)
@@ -121,7 +121,7 @@ export const fetchTeamMembers = unstable_cache(
 export const fetchBlogPosts = unstable_cache(
   async () => {
     try {
-      // In a real implementation, this would fetch from lhd-software.com
+      // In a real implementation, this would fetch from sisusolution.com
       return mockBlogPosts
     } catch (error) {
       console.error("Error fetching blog posts:", error)
@@ -135,7 +135,7 @@ export const fetchBlogPosts = unstable_cache(
 export const fetchBlogPostBySlug = unstable_cache(
   async (slug: string) => {
     try {
-      // In a real implementation, this would fetch from lhd-software.com
+      // In a real implementation, this would fetch from sisusolution.com
       return mockBlogPosts.find((post) => post.slug === slug) || null
     } catch (error) {
       console.error(`Error fetching blog post with slug ${slug}:`, error)
@@ -146,7 +146,7 @@ export const fetchBlogPostBySlug = unstable_cache(
   { revalidate: 3600 },
 )
 
-// Mock data (in a real implementation, this would come from lhd-software.com)
+// Mock data (in a real implementation, this would come from sisusolution.com)
 const mockServices: Service[] = [
   {
     id: "1",
@@ -252,7 +252,7 @@ const mockTeamMembers: TeamMember[] = [
     image: getPlaceholderImage(300, 400),
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "john@lhd-software.com",
+    email: "john@sisusolution.com",
   },
   {
     id: "2",
@@ -262,7 +262,7 @@ const mockTeamMembers: TeamMember[] = [
     image: getPlaceholderImage(300, 400),
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "sarah@lhd-software.com",
+    email: "sarah@sisusolution.com",
   },
   {
     id: "3",
@@ -271,7 +271,7 @@ const mockTeamMembers: TeamMember[] = [
     bio: "Specializes in full-stack development and cloud solutions.",
     image: getPlaceholderImage(300, 400),
     linkedin: "https://linkedin.com",
-    email: "michael@lhd-software.com",
+    email: "michael@sisusolution.com",
   },
   {
     id: "4",
@@ -281,7 +281,7 @@ const mockTeamMembers: TeamMember[] = [
     image: getPlaceholderImage(300, 400),
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "emily@lhd-software.com",
+    email: "emily@sisusolution.com",
   },
   {
     id: "5",
@@ -290,7 +290,7 @@ const mockTeamMembers: TeamMember[] = [
     bio: "Experienced in managing complex software projects and client relationships.",
     image: getPlaceholderImage(300, 400),
     linkedin: "https://linkedin.com",
-    email: "david@lhd-software.com",
+    email: "david@sisusolution.com",
   },
   {
     id: "6",
@@ -299,7 +299,7 @@ const mockTeamMembers: TeamMember[] = [
     bio: "Ensures the highest quality standards for all software deliverables.",
     image: getPlaceholderImage(300, 400),
     linkedin: "https://linkedin.com",
-    email: "lisa@lhd-software.com",
+    email: "lisa@sisusolution.com",
   },
   {
     id: "7",
@@ -308,7 +308,7 @@ const mockTeamMembers: TeamMember[] = [
     bio: "Specializes in CI/CD pipelines and cloud infrastructure.",
     image: getPlaceholderImage(300, 400),
     linkedin: "https://linkedin.com",
-    email: "robert@lhd-software.com",
+    email: "robert@sisusolution.com",
   },
   {
     id: "8",
@@ -318,7 +318,7 @@ const mockTeamMembers: TeamMember[] = [
     image: getPlaceholderImage(300, 400),
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "jennifer@lhd-software.com",
+    email: "jennifer@sisusolution.com",
   },
 ]
 

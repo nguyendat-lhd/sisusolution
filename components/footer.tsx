@@ -138,8 +138,8 @@ export default function Footer() {
               </li>
               <li style={{ display: "flex", alignItems: "flex-start" }}>
                 <Mail className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
-                <a href="mailto:dat.nguyen@lhd-software.com" className="text-muted-foreground hover:text-primary">
-                  dat.nguyen@lhd-software.com
+                <a href="mailto:dat.nguyen@sisusolution.com" className="text-muted-foreground hover:text-primary">
+                  dat.nguyen@sisusolution.com
                 </a>
               </li>
               <li style={{ display: "flex", alignItems: "flex-start" }}>

@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/private/", "/admin/"],
     },
-    sitemap: "https://lhd-software.com/sitemap.xml",
+    sitemap: "https://sisusolution.com/sitemap.xml",
   }
 }
 
