@@ -119,7 +119,7 @@ export default async function Home() {
       {/* Why Choose Us Section */}
       <ParallaxSection className="py-16 bg-primary text-primary-foreground">
         <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <ScrollReveal direction="left">
               <div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6">
@@ -155,7 +155,7 @@ export default async function Home() {
             <ScrollReveal direction="right">
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=800&width=600"
+                  src="/assets/why-choose-us.jpeg"
                   alt="Team collaboration"
                   className="object-cover w-full h-full"
                 />
