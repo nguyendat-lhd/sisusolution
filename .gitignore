@@ -9,8 +9,12 @@ node_modules/
 # Next.js
 /.next/
 /out/
+/.open-next/
+/build
+.next
 
 # Production
+/dist
 /build
 
 # Misc
@@ -40,6 +44,9 @@ next-env.d.ts
 # Cache
 .cache/
 
+# Cloudflare Workers
+.wrangler/
+
 # macOS
 .DS_Store
 .AppleDouble
@@ -63,3 +70,13 @@ next-env.d.ts
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
