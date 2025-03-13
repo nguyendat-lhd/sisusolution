@@ -1,3 +1,16 @@
 name = "sisusolution"
-compatibility_date = "2023-12-01"
-pages_build_output_dir = ".next"
+compatibility_date = "2024-01-01"
+build.output = "out"
+
+[build]
+command = "npm run build"
+
+[build.processing]
+  skip_source_maps = true
+
+[site]
+  bucket = "./out"
+  entry-point = "workers-site"
+
+[env.production]
+  workers_dev = false
