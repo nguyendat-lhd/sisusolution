@@ -21,18 +21,41 @@ const getPlaceholderImage = (width: number, height: number) => {
 export default function ServiceCard({ service }: ServiceProps) {
   return (
     <Card className="h-full flex flex-col">
+      <div className="relative w-full h-48 mb-4">
+        <Image
+          src={service.icon || getPlaceholderImage(800, 400)}
+          alt={service.title}
+          fill
+          className="object-cover rounded-t-lg"
+        />
+      </div>
       <CardHeader>
-        <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-primary/10">
-          <Image src={service.icon || getPlaceholderImage(48, 48)} alt={service.title} width={24} height={24} />
-        </div>
-        <CardTitle>{service.title}</CardTitle>
-        <CardDescription>{service.description}</CardDescription>
+        <CardTitle className="text-xl">{service.title}</CardTitle>
+        <CardDescription className="text-base">{service.description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <ul className="space-y-2 text-sm">
-          <li>Feature 1</li>
-          <li>Feature 2</li>
-          <li>Feature 3</li>
+        <ul className="space-y-3 text-sm text-muted-foreground">
+          {service.id === "temp-staffing" && (
+            <>
+              <li>• Quick access to skilled IT professionals</li>
+              <li>• Flexible contract durations</li>
+              <li>• Immediate project support</li>
+            </>
+          )}
+          {service.id === "permanent-placement" && (
+            <>
+              <li>• Comprehensive candidate screening</li>
+              <li>• Industry-specific expertise</li>
+              <li>• Long-term talent solutions</li>
+            </>
+          )}
+          {service.id === "temp-to-hire" && (
+            <>
+              <li>• Risk-free trial period</li>
+              <li>• Performance evaluation</li>
+              <li>• Seamless transition to permanent roles</li>
+            </>
+          )}
         </ul>
       </CardContent>
       <CardFooter>

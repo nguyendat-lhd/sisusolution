@@ -35,30 +35,50 @@ export default async function Home() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
               <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">Our Services</div>
               <AnimatedText
-                text="Comprehensive Outsourcing Solutions"
+                text="IT Staffing Solutions"
                 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
               />
               <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                We provide end-to-end outsourcing services tailored to your business needs.
+                We connect top IT talent with leading companies through flexible staffing solutions.
               </p>
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.slice(0, 6).map((service) => (
-              <StaggerItem key={service.id}>
-                <ServiceCard service={service} />
-              </StaggerItem>
-            ))}
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <StaggerItem>
+              <ServiceCard
+                service={{
+                  id: "temp-staffing",
+                  title: "Temporary Staffing",
+                  description: "Flexible IT talent solutions for short-term projects and immediate needs",
+                  icon: "/placeholder.svg?height=48&width=48",
+                  slug: "temporary-staffing"
+                }}
+              />
+            </StaggerItem>
+            <StaggerItem>
+              <ServiceCard
+                service={{
+                  id: "permanent-placement",
+                  title: "Permanent Placement",
+                  description: "Find the perfect full-time IT professionals for your organization",
+                  icon: "/placeholder.svg?height=48&width=48",
+                  slug: "permanent-placement"
+                }}
+              />
+            </StaggerItem>
+            <StaggerItem>
+              <ServiceCard
+                service={{
+                  id: "temp-to-hire",
+                  title: "Temp-To-Hire",
+                  description: "Evaluate talent through temporary assignments before making a permanent commitment",
+                  icon: "/placeholder.svg?height=48&width=48",
+                  slug: "temp-to-hire"
+                }}
+              />
+            </StaggerItem>
           </StaggerContainer>
-
-          <div className="flex justify-center mt-10">
-            <AnimatedButton asChild>
-              <Link href="/services">
-                View All Services <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </AnimatedButton>
-          </div>
         </div>
       </section>
 
