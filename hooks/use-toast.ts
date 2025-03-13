@@ -9,8 +9,12 @@ type ToastProps = {
   duration?: number
 }
 
+type Toast = ToastProps & {
+  id: string
+}
+
 export function useToast() {
-  const [toasts, setToasts] = useState<ToastProps[]>([])
+  const [toasts, setToasts] = useState<Toast[]>([])
 
   const toast = useCallback(({ title, description, variant = "default", duration = 5000 }: ToastProps) => {
     const id = Math.random().toString(36).substring(2, 9)

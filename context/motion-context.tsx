@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState, type ReactNode } from "react"
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
 
 type MotionContextType = {
   prefersReducedMotion: boolean
@@ -13,7 +13,7 @@ export function MotionProvider({ children }: { children: ReactNode }) {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
 
   // Check for user's system preference on mount
-  useState(() => {
+  useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
     setPrefersReducedMotion(mediaQuery.matches)
 
@@ -23,7 +23,7 @@ export function MotionProvider({ children }: { children: ReactNode }) {
 
     mediaQuery.addEventListener("change", handleChange)
     return () => mediaQuery.removeEventListener("change", handleChange)
-  })
+  }, [])
 
   const toggleReducedMotion = () => {
     setPrefersReducedMotion((prev) => !prev)

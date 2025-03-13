@@ -4,6 +4,7 @@ import type { ReactNode } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { useMotion } from "@/context/motion-context"
+import { Slot } from "@radix-ui/react-slot"
 
 interface AnimatedButtonProps {
   children: ReactNode
@@ -13,6 +14,7 @@ interface AnimatedButtonProps {
   size?: "default" | "sm" | "lg" | "icon"
   disabled?: boolean
   type?: "button" | "submit" | "reset"
+  asChild?: boolean
 }
 
 export default function AnimatedButton({
@@ -23,8 +25,10 @@ export default function AnimatedButton({
   size = "default",
   disabled = false,
   type = "button",
+  asChild = false,
 }: AnimatedButtonProps) {
   const { prefersReducedMotion } = useMotion()
+  const Comp = asChild ? Slot : Button
 
   const buttonVariants = {
     hover: {
@@ -42,9 +46,9 @@ export default function AnimatedButton({
 
   return (
     <motion.div whileHover="hover" whileTap="tap" variants={buttonVariants}>
-      <Button onClick={onClick} className={className} variant={variant} size={size} disabled={disabled} type={type}>
+      <Comp onClick={onClick} className={className} variant={variant} size={size} disabled={disabled} type={type}>
         {children}
-      </Button>
+      </Comp>
     </motion.div>
   )
 }

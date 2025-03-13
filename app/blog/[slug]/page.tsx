@@ -1,12 +1,21 @@
 import type { Metadata } from "next"
+import type { ResolvingMetadata } from "next"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { Calendar, Clock, User } from "lucide-react"
 import { fetchBlogPostBySlug, fetchBlogPosts } from "@/lib/api"
 import { getPlaceholderImage } from "@/lib/utils"
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = await fetchBlogPostBySlug(params.slug)
+type Props = {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { slug } = await params
+  const post = await fetchBlogPostBySlug(slug)
 
   if (!post) {
     return {
@@ -28,8 +37,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await fetchBlogPostBySlug(params.slug)
+export default async function Page({ params }: Props) {
+  const { slug } = await params
+  const post = await fetchBlogPostBySlug(slug)
 
   if (!post) {
     notFound()
@@ -69,5 +79,4 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       </article>
     </main>
   )
-}
-
+} 
