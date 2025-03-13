@@ -6,13 +6,15 @@ export default function Footer() {
     <footer className="bg-gray-50 border-t w-full">
       <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "3rem 1rem" }}>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* First column - Company Info + Contact Us (takes 2 columns) */}
-          <div className="md:col-span-2 space-y-8">
-            {/* Company Info */}
+          {/* First column - Company Info */}
+          <div>
             <div>
               <Link href="/" className="inline-block mb-4">
-                <span className="text-2xl font-bold">LHD Software</span>
+                <span className="text-2xl font-bold">Sisu Solution</span>
               </Link>
+              <p className="text-muted-foreground mb-4">
+                Empowering businesses through innovative software solutions. We deliver excellence in outsourcing services with a focus on quality, efficiency, and customer satisfaction.
+              </p>
               <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
                 <Link href="#" className="text-muted-foreground hover:text-primary">
                   <Facebook className="h-5 w-5" />
@@ -31,50 +33,6 @@ export default function Footer() {
                   <span className="sr-only">Instagram</span>
                 </Link>
               </div>
-            </div>
-
-            {/* Contact Us */}
-            <div>
-              <h3 className="font-medium text-lg mb-4">Contact Us</h3>
-              <ul style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                <li style={{ display: "flex", alignItems: "flex-start" }}>
-                  <MapPin className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">US Office</p>
-                    <address className="not-italic text-muted-foreground">
-                      5410 Kingsessing Ave
-                      <br />
-                      Philadelphia, PA 19142
-                    </address>
-                  </div>
-                </li>
-                <li style={{ display: "flex", alignItems: "flex-start" }}>
-                  <MapPin className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Vietnam Office</p>
-                    <address className="not-italic text-muted-foreground">
-                      LHD TECH
-                      <br />4 Binh Loi,
-                      <br />
-                      Ward 13, Binh Thanh District,
-                      <br />
-                      HCMC - 717000
-                    </address>
-                  </div>
-                </li>
-                <li style={{ display: "flex", alignItems: "flex-start" }}>
-                  <Mail className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
-                  <a href="mailto:dat.nguyen@lhd-software.com" className="text-muted-foreground hover:text-primary">
-                    dat.nguyen@lhd-software.com
-                  </a>
-                </li>
-                <li style={{ display: "flex", alignItems: "flex-start" }}>
-                  <Phone className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
-                  <a href="tel:+15551234567" className="text-muted-foreground hover:text-primary">
-                    +1 (555) 123-4567
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
 
@@ -151,6 +109,47 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Fourth column - Contact Us */}
+          <div>
+            <h3 className="font-medium text-lg mb-4">Contact Us</h3>
+            <ul style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              <li style={{ display: "flex", alignItems: "flex-start" }}>
+                <MapPin className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
+                <div>
+                  <p className="font-medium">US Office</p>
+                  <address className="not-italic text-muted-foreground">
+                    5410 Kingsessing Ave
+                    <br />
+                    Philadelphia, PA 19142
+                  </address>
+                </div>
+              </li>
+              <li style={{ display: "flex", alignItems: "flex-start" }}>
+                <MapPin className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
+                <div>
+                  <p className="font-medium">Vietnam Office</p>
+                  <address className="not-italic text-muted-foreground">
+                    4 Binh Loi, Ward 13, <br />
+                    Binh Thanh District, HCMC
+                    
+                  </address>
+                </div>
+              </li>
+              <li style={{ display: "flex", alignItems: "flex-start" }}>
+                <Mail className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
+                <a href="mailto:dat.nguyen@lhd-software.com" className="text-muted-foreground hover:text-primary">
+                  dat.nguyen@lhd-software.com
+                </a>
+              </li>
+              <li style={{ display: "flex", alignItems: "flex-start" }}>
+                <Phone className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
+                <a href="tel:+15551234567" className="text-muted-foreground hover:text-primary">
+                  +84 0906.339.495
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div
@@ -164,7 +163,7 @@ export default function Footer() {
           }}
         >
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} LHD Software. All rights reserved.
+            © {new Date().getFullYear()} Sisu Solution. All rights reserved.
           </p>
           <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
             <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary">
