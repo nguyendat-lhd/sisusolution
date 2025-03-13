@@ -51,7 +51,7 @@ export default async function Home() {
                   id: "temp-staffing",
                   title: "Temporary Staffing",
                   description: "Flexible IT talent solutions for short-term projects and immediate needs",
-                  icon: "/placeholder.svg?height=48&width=48",
+                  icon: "/assets/temporary-staffing.webp",
                   slug: "temporary-staffing"
                 }}
               />
@@ -62,7 +62,7 @@ export default async function Home() {
                   id: "permanent-placement",
                   title: "Permanent Placement",
                   description: "Find the perfect full-time IT professionals for your organization",
-                  icon: "/placeholder.svg?height=48&width=48",
+                  icon: "/assets/permanent-placement.jpeg",
                   slug: "permanent-placement"
                 }}
               />
@@ -73,7 +73,7 @@ export default async function Home() {
                   id: "temp-to-hire",
                   title: "Temp-To-Hire",
                   description: "Evaluate talent through temporary assignments before making a permanent commitment",
-                  icon: "/placeholder.svg?height=48&width=48",
+                  icon: "/assets/temp-to-hire.jpg",
                   slug: "temp-to-hire"
                 }}
               />
